@@ -1,0 +1,32 @@
+package odd_semester;
+import java.awt.Color;
+import java.awt.Container;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+public class label extends JFrame{
+	private Container c;
+	private JLabel user,user1;
+	label(){
+		initialization();
+	}
+	public void initialization(){
+		c=this.getContentPane();
+		c.setBackground(Color.CYAN);
+		c.setLayout(null);	
+		user=new JLabel();
+		user.setText("Enter your username: ");
+		user.setBounds(20,1,200,100);
+		c.add(user);
+		user1=new JLabel();
+		user1.setText("Enter your password: ");
+		user1.setBounds(20,10,200,100);
+		c.add(user1);
+		
+	}
+	public static void main(String[] args) {
+		label frame=new label();
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setBounds(450,200,500,300);
+	}
+}
